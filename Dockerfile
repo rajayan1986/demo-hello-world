@@ -8,6 +8,8 @@ COPY . .
 RUN npm run build
 
 ### STAGE 2: Run ###
+# Create a new image for the production application
+FROM nginx:alpine
 COPY --from=build /usr/src/app/dist/angular-hello-world /usr/share/nginx/html
 
 EXPOSE 80
