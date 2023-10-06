@@ -26,13 +26,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t maharera-ui-main-app:maharera-ui-main .
+          docker build -t demo-hello-world:demo-hello-world .
         
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag maharera-ui-main-app:maharera-ui-main ${{ secrets.DOCKERHUB_USERNAME }}/maharera-ui-main-app:maharera-ui-main
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/maharera-ui-main-app:maharera-ui-main
+          docker tag demo-hello-world:demo-hello-world ${{ secrets.DOCKERHUB_USERNAME }}/demo-hello-world:demo-hello-world
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/demo-hello-world:demo-hello-world
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
