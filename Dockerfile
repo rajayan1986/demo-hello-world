@@ -1,4 +1,4 @@
-# Use the official Node.js LTS (Long Term Support) image as a base image
+# Use the official Node.js LTS (Long Term Support) image as a base image testing
 FROM node:18.16.0 AS build
 
 WORKDIR /usr/src/app
